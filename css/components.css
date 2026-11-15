@@ -1,0 +1,30 @@
+/* Botones reutilizables */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.btn-primary:hover { background-color: var(--color-primary-hover); }
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-bg-soft);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.badge-dot {
+    width: 8px; height: 8px;
+    background-color: #FCD34D;
+    border-radius: 50%;
+}
+
+.text-primary { color: var(--color-primary); }

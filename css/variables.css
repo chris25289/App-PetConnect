@@ -1,0 +1,28 @@
+:root {
+    /* 🎨 Paleta de colores - Modifica aquí para cambiar todo el tema */
+    --color-primary: #4A9B8E;
+    --color-primary-hover: #3d8276;
+    --color-bg-body: #FFFFFF;
+    --color-bg-soft: #F8FAFC;
+    
+    /* ✏️ Tipografía */
+    --text-main: #0F172A;
+    --text-muted: #64748B;
+    --text-light: #94A3B8;
+    --font-family: 'Inter', system-ui, sans-serif;
+    
+    /* 🧱 UI */
+    --border-color: #E2E8F0;
+    --radius-full: 9999px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+body.dark-mode {
+    --color-bg-body: #0F172A;
+    --color-bg-soft: #1E293B;
+    --text-main: #F8FAFC;
+    --text-muted: #CBD5E1;
+    --border-color: #334155;
+}

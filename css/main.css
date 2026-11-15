@@ -1,0 +1,35 @@
+/**
+ * 📦 Archivo principal de estilos
+ * Importa todos los módulos CSS en el orden correcto
+ * 
+ * Uso: en lugar de linkear 5 archivos en el HTML,
+ * solo linkeas este:
+ * <link rel="stylesheet" href="css/main.css">
+ */
+/* css/main.css */
+/* 1️⃣ Variables (siempre primero) */
+@import url('variables.css');
+
+/* 2️⃣ Reset de estilos base */
+@import url('reset.css');
+
+/* 3️⃣ Componentes reutilizables */
+@import url('components.css');
+
+/* 4️⃣ Layouts por sección */
+@import url('header.css');
+@import url('hero.css');
+
+@import url('services.css');      /* 👈 NUEVO: Sección de servicios */
+
+/* 5️⃣ Utilidades */
+@import url('utilities.css');
+
+/* 
+   ⚠️ NOTA: @import tiene un pequeño costo de rendimiento 
+   porque hace múltiples peticiones HTTP.
+   
+   Para producción, considera:
+   a) Concatenar todos los CSS en uno solo con un bundler (Vite, Webpack)
+   b) O linkear cada archivo directamente en el HTML
+*/
