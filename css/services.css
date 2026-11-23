@@ -6,9 +6,11 @@
    ========================================= */
 .services {
     padding: 6rem 0;
+    /* Fondo anaranjado pastel sobre el tiza */
+    background: linear-gradient(180deg, #FFFBF5 0%, #FFF5EB 50%, #FEEED3 100%);
     position: relative;
-    /* El fondo ahora se maneja con el pseudo-elemento */
 }
+
 
 /* Fondo anaranjado que atraviesa TODO el ancho de la pantalla */
 .services::before {
@@ -103,7 +105,7 @@
 }
 
 .service-card {
-    background: white;
+    background: var(--color-bg-card);  /* 👈 Blanco puro para contraste */
     border: 1px solid rgba(234, 179, 136, 0.2);
     border-radius: var(--radius-lg);
     padding: 2rem;
@@ -112,8 +114,9 @@
     overflow: hidden;
 }
 
+
 body.dark-mode .service-card {
-    background: var(--color-bg-soft);
+    background: var(--color-bg-card);
 }
 
 .service-card:hover {

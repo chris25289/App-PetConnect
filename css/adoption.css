@@ -1,0 +1,344 @@
+/* =========================================
+   SECCIÓN ADOPCIÓN
+   ========================================= */
+.adoption {
+    padding: 4rem 0 6rem;
+    background: var(--color-bg-body);
+    position: relative;
+}
+
+/* Fondo tiza que atraviesa TODO el ancho de la pantalla */
+.adoption::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(74, 155, 142, 0.2) 15%, 
+        rgba(74, 155, 142, 0.4) 50%, 
+        rgba(74, 155, 142, 0.2) 85%, 
+        transparent 100%
+    );
+}
+
+
+/* Línea divisoria superior */
+.adoption::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(74, 155, 142, 0.2) 15%, 
+        rgba(74, 155, 142, 0.4) 50%, 
+        rgba(74, 155, 142, 0.2) 85%, 
+        transparent 100%
+    );
+}
+
+/* =========================================
+   HEADER EXTERNO (label + título + frase)
+   ========================================= */
+.adoption-header {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    margin-bottom: 1.5rem;   /* 👈 antes: 3rem, ahora: 1.5rem */
+    align-items: start;
+}
+
+.adoption-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.adoption-intro .section-label {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.adoption-intro h2 {
+    font-size: 2.75rem;
+    line-height: 1.15;
+    color: var(--text-main);
+    font-weight: 700;
+    margin: 0;
+}
+
+.adoption-slogan {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    font-style: italic;
+    padding: 1.5rem;
+    padding-left: 3.5rem;
+    background: var(--color-bg-soft);
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.04),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-md);
+    position: relative;
+    margin-top: 1rem; /* Alinea con el h2, no con el label */
+}
+
+
+/* Icono de patitas en el slogan */
+.adoption-slogan::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234A9B8E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='4' r='2'/%3E%3Ccircle cx='18' cy='8' r='2'/%3E%3Ccircle cx='20' cy='16' r='2'/%3E%3Cpath d='M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+/* =========================================
+   TARJETA PRINCIPAL (estilo intacto)
+   ========================================= */
+.adoption-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+/* Columna Izquierda: Contenido */
+.adoption-content {
+    padding: 1.5rem 4rem;   /* 👈 antes: 4rem 4rem 2rem 4rem */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;         /* 👈 antes: 1.5rem (un poco más compacto) */
+}
+.adoption-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #FEF3C7;
+    color: #D97706;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.adoption-badge svg {
+    width: 16px;
+    height: 16px;
+}
+
+.adoption-description {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Botones */
+.adoption-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.btn-adoption-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-adoption-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.btn-with-arrow svg {
+    transition: transform 0.2s ease;
+}
+
+.btn-adoption-primary:hover svg {
+    transform: translateX(4px);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.85rem 1.5rem;
+    background: white;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--color-bg-soft);
+    border-color: var(--text-light);
+}
+
+/* Divisor */
+.adoption-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 0.5rem 0;
+}
+
+/* Estadísticas */
+.adoption-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 0.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Columna Derecha: Imagen */
+.adoption-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;   /* 👈 define la caja de la columna derecha */
+}
+
+.adoption-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 968px) {
+    /* Header se apila en móvil */
+    .adoption-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .adoption-intro h2 {
+        font-size: 2rem;
+    }
+
+    .adoption-slogan {
+        margin-top: 0;
+    }
+
+    /* Tarjeta */
+    .adoption-card {
+        grid-template-columns: 1fr;
+    }
+
+    .adoption-content {
+        padding: 2rem 2rem;   /* 👈 también compacto en móvil */
+    }
+
+    .adoption-image {
+        min-height: 300px;
+    }
+
+    .adoption-stats {
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .adoption-content {
+        padding: 1.5rem;
+    }
+
+    .adoption-actions {
+        flex-direction: column;
+    }
+
+    .btn-adoption-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .adoption-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+/* =========================================
+   MODO OSCURO
+   ========================================= */
+body.dark-mode .adoption::before {
+    background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg-body) 100%);
+}
+
+body.dark-mode .adoption-card {
+    background: var(--color-bg-card);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .adoption-slogan {
+    background: var(--color-bg-soft);
+    color: var(--text-muted);
+}
+
+body.dark-mode .btn-secondary {
+    background: var(--color-bg-soft);
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: var(--color-bg-body);
+}

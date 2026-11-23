@@ -1,28 +1,39 @@
 :root {
-    /* 🎨 Paleta de colores - Modifica aquí para cambiar todo el tema */
+    /* Colores Principales */
     --color-primary: #4A9B8E;
     --color-primary-hover: #3d8276;
-    --color-bg-body: #FFFFFF;
-    --color-bg-soft: #F8FAFC;
     
-    /* ✏️ Tipografía */
+    /* 🎨 FONDO ACTUALIZADO - Blanco tiza */
+    --color-bg-body: #FAFAF9;        /* Antes: #FFFFFF */
+    --color-bg-soft: #F5F5F4;        /* Antes: #F8FAFC - un tono más cálido */
+    --color-bg-card: #FFFFFF;        /* 👈 NUEVO: blanco puro solo para tarjetas */
+    
+    /* Tipografía y Textos */
     --text-main: #0F172A;
     --text-muted: #64748B;
     --text-light: #94A3B8;
-    --font-family: 'Inter', system-ui, sans-serif;
     
-    /* 🧱 UI */
-    --border-color: #E2E8F0;
+    /* UI Elements */
+    --border-color: #E7E5E4;         /* Antes: #E2E8F0 - borde más cálido */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+    
+    /* Radios */
     --radius-full: 9999px;
     --radius-md: 12px;
     --radius-lg: 24px;
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    
+    /* Fuentes */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Modo Oscuro */
 body.dark-mode {
-    --color-bg-body: #0F172A;
-    --color-bg-soft: #1E293B;
+    --color-bg-body: #1C1917;        /* Stone-900 */
+    --color-bg-soft: #292524;        /* Stone-800 */
+    --color-bg-card: #292524;
     --text-main: #F8FAFC;
     --text-muted: #CBD5E1;
-    --border-color: #334155;
+    --border-color: #44403C;
 }

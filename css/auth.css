@@ -1,0 +1,448 @@
+/* =========================================
+   MODAL DE AUTENTICACIÓN
+   ========================================= */
+.auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.auth-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.auth-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    z-index: 10;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.auth-close:hover {
+    background: var(--color-bg-soft);
+    transform: rotate(90deg);
+}
+
+.auth-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 1100px;
+    height: 95vh;
+    max-height: 780px;
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.auth-modal.active .auth-container {
+    transform: scale(1);
+}
+
+/* Columna Izquierda: Formulario */
+.auth-form-side {
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;              /* 👈 Cambiado de 'flex-start' a 'center' */
+    justify-content: center;          /* 👈 NUEVO: centra horizontalmente también */
+    min-height: 100%;                 /* 👈 NUEVO: ocupa toda la altura */
+}
+
+.auth-form-wrapper {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.auth-logo .logo-icon {
+    background-color: var(--color-primary);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.2rem;
+}
+
+.auth-subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Botón Google */
+.btn-google {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-weight: 500;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-google:hover {
+    background: var(--color-bg-soft);
+    border-color: var(--text-light);
+}
+
+/* Separador */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    color: var(--text-light);
+    font-size: 0.75rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.auth-divider span {
+    padding: 0 0.6rem;
+}
+
+/* Tabs */
+.auth-tabs {
+    display: flex;
+    background: var(--color-bg-soft);
+    border-radius: var(--radius-md);
+    padding: 0.2rem;
+    margin-bottom: 0;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 0.45rem;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.8rem;
+}
+
+.auth-tab.active {
+    background: white;
+    color: var(--text-main);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Formulario */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.form-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-link {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+.form-group input {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    color: var(--text-main);
+    background: var(--color-bg-card);
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(74, 155, 142, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-light);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.7rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 0.2rem;
+}
+
+.btn-submit:hover {
+    background: var(--color-primary-hover);
+}
+
+/* Columna Derecha: Imagen */
+.auth-image-side {
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Utilidad hidden */
+.hidden {
+    display: none !important;
+}
+
+/* =========================================
+   SELECTOR TIPO DE CUENTA (mejorado)
+   ========================================= */
+.account-type-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.account-type-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.account-type-option label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.55rem 1rem;                 /* 👈 Antes: 0.7rem 1rem */
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--color-bg-card);
+    color: var(--text-main);
+    font-size: 0.85rem;                    /* 👈 Antes: 0.9rem */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    text-align: center;
+}
+
+/* Ocultamos el radio pero lo dejamos accesible */
+.account-type-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* La label actúa como el "botón" */
+.account-type-option label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--color-bg-card);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    text-align: center;
+}
+
+/* Hover (solo en no seleccionado) */
+.account-type-option input:not(:checked) + label:hover {
+    background: var(--color-bg-soft);
+    border-color: var(--text-light);
+}
+
+/* Estado seleccionado */
+.account-type-option input:checked + label {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 6px rgba(74, 155, 142, 0.25);
+}
+
+/* Indicador de foco accesible (teclado) */
+.account-type-option input:focus-visible + label {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 968px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+        height: 95vh;
+        max-height: none;
+    }
+
+    .auth-image-side {
+        display: none;
+    }
+
+    .auth-form-side {
+        padding: 1.5rem;
+    }
+
+    .auth-close {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-form-side {
+        padding: 1.25rem;
+    }
+
+    .auth-title {
+        font-size: 1.5rem;
+    }
+
+    .account-type-options {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* =========================================
+   MODO OSCURO
+   ========================================= */
+body.dark-mode .auth-container {
+    background: var(--color-bg-body);
+}
+
+body.dark-mode .auth-close {
+    background: var(--color-bg-soft);
+    color: var(--text-main);
+}
+
+body.dark-mode .auth-tabs {
+    background: var(--color-bg-soft);
+}
+
+body.dark-mode .auth-tab.active {
+    background: var(--color-bg-body);
+    color: var(--text-main);
+}
+
+body.dark-mode .form-group input {
+    background: var(--color-bg-soft);
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+body.dark-mode .btn-google {
+    background: var(--color-bg-soft);
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+body.dark-mode .account-type-option label {
+    background: var(--color-bg-soft);
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+body.dark-mode .account-type-option input:checked + label {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}

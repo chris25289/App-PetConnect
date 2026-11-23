@@ -21,7 +21,10 @@
 @import url('hero.css');
 
 @import url('services.css');      /* 👈 NUEVO: Sección de servicios */
-
+@import url('how-it-works.css');      /* 👈 NUEVO */
+@import url('adoption.css');         /* 👈 NUEVO */
+@import url('community.css');      /* 👈 NUEVO */
+@import url('auth.css');
 /* 5️⃣ Utilidades */
 @import url('utilities.css');
 

@@ -1,9 +1,11 @@
+/* El hero ya no necesita fondo blanco explícito, hereda del body */
 .hero {
     padding: 4rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    /* Sin background explícito para que use el tiza del body */
 }
 .hero h1 {
     font-size: 4rem;
@@ -15,13 +17,16 @@
     color: var(--text-muted);
     margin-bottom: 2.5rem;
 }
+/* La barra de búsqueda SÍ debe ser blanca para destacar */
 .search-bar {
     display: flex;
-    background: white;
+    background: var(--color-bg-card);  /* 👈 Blanco puro */
     border: 1px solid var(--border-color);
     border-radius: var(--radius-full);
     padding: 0.5rem;
+    box-shadow: var(--shadow-sm);
     margin-bottom: 2rem;
+    max-width: 550px;
 }
 .search-input-group {
     display: flex;
@@ -62,15 +67,17 @@
     object-fit: cover;
     border-radius: var(--radius-lg);
 }
+/* Tarjetas flotantes blancas */
 .floating-card {
     position: absolute;
-    background: white;
+    background: var(--color-bg-card);  /* 👈 Blanco puro */
     padding: 1rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     display: flex;
     align-items: center;
     gap: 1rem;
+    z-index: 10;
 }
 .card-top-right {
     top: 2rem;
