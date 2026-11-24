@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Profesional - Mi Compañero</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard-service.css">
+</head>
+<body class="dashboard-service-body">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="20" cy="16" r="2"></circle><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"></path></svg>
+                </div>
+                Mi Compañero
+            </a>
+            <span class="role-chip">Prestador de servicios</span>
+            <span class="demo-note">Cambios locales de demostración</span>
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn" id="notifBtn" aria-label="Notificaciones">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                <span class="notif-badge">5</span>
+            </button>
+            <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema">
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="ds-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="ds-sidebar" id="dsSidebar">
+            <span class="ds-sidebar-label">Tu actividad</span>
+            <nav class="ds-nav">
+                <a href="#" class="ds-nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="6" height="9" x="14" y="12" rx="1"></rect><rect width="6" height="5" x="3" y="16" rx="1"></rect></svg>
+                    Resumen
+                </a>
+                <a href="#" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Servicios
+                </a>
+                <a href="#" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                    Agenda
+                </a>
+                <a href="#" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    Solicitudes
+                </a>
+                <a href="#" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    Mensajes
+                </a>
+                <a href="#" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    Valoraciones
+                </a>
+                <a href="#" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    Mi perfil
+                </a>
+            </nav>
+
+            <div class="ds-nav-divider"></div>
+
+            <nav class="ds-nav">
+                <a href="index.html" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Ir al inicio
+                </a>
+                <a href="#" class="ds-nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Configuración
+                </a>
+            </nav>
+
+            <div class="ds-user-card">
+                <div class="ds-user-top">
+                    <div class="ds-avatar">PD</div>
+                    <div class="ds-user-info">
+                        <div class="ds-user-name">Patitas del Parque</div>
+                        <div class="ds-user-role">Prestador de servic...</div>
+                    </div>
+                </div>
+                <a href="#" class="ds-user-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    Ver mi cuenta
+                </a>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO -->
+        <main class="ds-main">
+
+            <!-- Header -->
+            <div class="ds-page-head">
+                <div class="ds-head-badges">
+                    <span class="ds-badge ds-badge--teal">Panel profesional</span>
+                    <span class="ds-badge ds-badge--ghost">Demostración interactiva</span>
+                </div>
+                <h1 class="ds-hello">Hola, christian</h1>
+                <p class="ds-hello-sub">Gestiona Patitas del Parque, tus servicios y tu comunidad desde un solo lugar.</p>
+            </div>
+
+            <!-- Fila de chips + acciones -->
+            <div class="ds-toolbar">
+                <div class="ds-chips" id="specChips">
+                    <button class="ds-chip active" data-spec="veterinaria">Veterinaria</button>
+                    <button class="ds-chip active" data-spec="paseador">Paseador</button>
+                    <button class="ds-chip active" data-spec="cuidador">Cuidador con lugar propio</button>
+                    <button class="ds-chip active" data-spec="refugio">Refugio de animales</button>
+                    <button class="ds-chip active" data-spec="peluqueria">Peluquería</button>
+                    <button class="ds-chip active" data-spec="transporte-animales">Transporte de animales</button>
+                    <button class="ds-chip active" data-spec="transporte-productos">Transporte de productos</button>
+                </div>
+                <div class="ds-toolbar-actions">
+                    <button class="ds-available" id="availableBtn">
+                        <span class="ds-available-dot"></span>
+                        Disponible
+                    </button>
+                    <button class="btn-primary ds-new-service" id="newServiceBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        Nuevo servicio
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="ds-stats">
+                <div class="ds-stat">
+                    <div class="ds-stat-body">
+                        <span class="ds-stat-label">Turnos próximos</span>
+                        <span class="ds-stat-value">3</span>
+                        <span class="ds-stat-note">Servicios confirmados en tu agenda</span>
+                    </div>
+                    <div class="ds-stat-icon ds-stat-icon--teal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                    </div>
+                </div>
+                <div class="ds-stat">
+                    <div class="ds-stat-body">
+                        <span class="ds-stat-label">Ingresos del mes</span>
+                        <span class="ds-stat-value">$184.500</span>
+                        <span class="ds-stat-note">Incluye servicios marcados como completados</span>
+                    </div>
+                    <div class="ds-stat-icon ds-stat-icon--amber">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                    </div>
+                </div>
+                <div class="ds-stat">
+                    <div class="ds-stat-body">
+                        <span class="ds-stat-label">Servicios activos</span>
+                        <span class="ds-stat-value">7</span>
+                        <span class="ds-stat-note">7 especialidades elegidas</span>
+                    </div>
+                    <div class="ds-stat-icon ds-stat-icon--teal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20h4a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4"></path><rect width="12" height="14" x="2" y="6" rx="2"></rect><path d="M10 2v4"></path><path d="M6 2v4"></path><path d="M14 2v4"></path></svg>
+                    </div>
+                </div>
+                <div class="ds-stat">
+                    <div class="ds-stat-body">
+                        <span class="ds-stat-label">Valoración</span>
+                        <span class="ds-stat-value">4,9</span>
+                        <span class="ds-stat-note">Basada en 87 reseñas verificadas</span>
+                    </div>
+                    <div class="ds-stat-icon ds-stat-icon--amber">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidades y servicios -->
+            <section class="ds-block">
+                <div class="ds-block-head">
+                    <div>
+                        <h2 class="ds-block-title">Especialidades y servicios</h2>
+                        <p class="ds-block-sub">Elige una o varias áreas y personaliza lo que ofreces en cada una.</p>
+                    </div>
+                    <button class="btn-mini" id="addSpecBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        Añadir servicio
+                    </button>
+                </div>
+
+                <div class="ds-specs">
+                    <div class="ds-spec-card active">
+                        <span class="ds-spec-dot"></span>
+                        <div class="ds-spec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v20"></path><path d="M5 2v20"></path><path d="M19 2v20"></path><path d="M5 8h14"></path><path d="M5 16h14"></path></svg></div>
+                        <h3>Veterinaria</h3>
+                        <p>Consultas, vacunación y controles de salud.</p>
+                    </div>
+                    <div class="ds-spec-card active">
+                        <span class="ds-spec-dot"></span>
+                        <div class="ds-spec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="20" cy="16" r="2"></circle><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"></path></svg></div>
+                        <h3>Paseador</h3>
+                        <p>Paseos individuales o grupales y actividad física.</p>
+                    </div>
+                    <div class="ds-spec-card active">
+                        <span class="ds-spec-dot"></span>
+                        <div class="ds-spec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                        <h3>Cuidador con lugar propio</h3>
+                        <p>Hospedaje y compañía en el espacio del cuidador.</p>
+                    </div>
+                    <div class="ds-spec-card active">
+                        <span class="ds-spec-dot"></span>
+                        <div class="ds-spec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div>
+                        <h3>Refugio de animales</h3>
+                        <p>Adopciones, rescates y campañas solidarias.</p>
+                    </div>
+                    <div class="ds-spec-card active">
+                        <span class="ds-spec-dot"></span>
+                        <div class="ds-spec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg></div>
+                        <h3>Peluquería</h3>
+                        <p>Baño, corte y cuidado estético.</p>
+                    </div>
+                    <div class="ds-spec-card active">
+                        <span class="ds-spec-dot"></span>
+                        <div class="ds-spec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+                        <h3>Transporte de animales</h3>
+                        <p>Traslados seguros a veterinarias y otros destinos.</p>
+                    </div>
+                    <div class="ds-spec-card active">
+                        <span class="ds-spec-dot"></span>
+                        <div class="ds-spec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+                        <h3>Transporte de productos</h3>
+                        <p>Entrega de alimento, accesorios y productos esenciales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Servicios en tu perfil -->
+            <section class="ds-block">
+                <div class="ds-block-head ds-block-head--single">
+                    <p class="ds-block-count" id="serviceCount">7 servicios en tu perfil</p>
+                </div>
+
+                <div class="ds-services" id="servicesGrid">
+                    <!-- Servicio 1 -->
+                    <article class="ds-service-card">
+                        <div class="ds-service-top">
+                            <div class="ds-service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v20"></path><path d="M5 2v20"></path><path d="M19 2v20"></path><path d="M5 8h14"></path><path d="M5 16h14"></path></svg></div>
+                            <div class="ds-service-actions">
+                                <button class="ds-service-btn" aria-label="Editar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg></button>
+                                <button class="ds-service-btn ds-service-btn--danger" aria-label="Eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                            </div>
+                        </div>
+                        <span class="ds-service-type">Veterinaria</span>
+                        <h3>Consulta general y control</h3>
+                        <p class="ds-service-desc">Evaluación integral, actualización del carnet y plan de cuidados.</p>
+                        <div class="ds-service-price-row">
+                            <span class="ds-service-price">$28.000</span>
+                            <span class="ds-service-unit">por servicio</span>
+                        </div>
+                        <div class="ds-service-meta">
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>30 minutos</span>
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Consultorio central</span>
+                        </div>
+                        <div class="ds-service-divider"></div>
+                        <label class="ds-toggle-row">
+                            <span class="ds-toggle-label">Visible en tu perfil</span>
+                            <span class="ds-toggle">
+                                <input type="checkbox" checked>
+                                <span class="ds-toggle-slider"></span>
+                            </span>
+                        </label>
+                    </article>
+
+                    <!-- Servicio 2 -->
+                    <article class="ds-service-card">
+                        <div class="ds-service-top">
+                            <div class="ds-service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="20" cy="16" r="2"></circle><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"></path></svg></div>
+                            <div class="ds-service-actions">
+                                <button class="ds-service-btn" aria-label="Editar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg></button>
+                                <button class="ds-service-btn ds-service-btn--danger" aria-label="Eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                            </div>
+                        </div>
+                        <span class="ds-service-type">Paseador</span>
+                        <h3>Paseo de 45 minutos</h3>
+                        <p class="ds-service-desc">Paseo individual con fotos, recorrido y reporte al finalizar.</p>
+                        <div class="ds-service-price-row">
+                            <span class="ds-service-price">$4.500</span>
+                            <span class="ds-service-unit">por servicio</span>
+                        </div>
+                        <div class="ds-service-meta">
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>45 minutos</span>
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Palermo y Belgrano</span>
+                        </div>
+                        <div class="ds-service-divider"></div>
+                        <label class="ds-toggle-row">
+                            <span class="ds-toggle-label">Visible en tu perfil</span>
+                            <span class="ds-toggle">
+                                <input type="checkbox" checked>
+                                <span class="ds-toggle-slider"></span>
+                            </span>
+                        </label>
+                    </article>
+
+                    <!-- Servicio 3 -->
+                    <article class="ds-service-card">
+                        <div class="ds-service-top">
+                            <div class="ds-service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                            <div class="ds-service-actions">
+                                <button class="ds-service-btn" aria-label="Editar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg></button>
+                                <button class="ds-service-btn ds-service-btn--danger" aria-label="Eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                            </div>
+                        </div>
+                        <span class="ds-service-type">Cuidador con lugar propio</span>
+                        <h3>Cuidado diario en mi hogar</h3>
+                        <p class="ds-service-desc">Compañía, alimentación, juegos y descanso en un espacio seguro.</p>
+                        <div class="ds-service-price-row">
+                            <span class="ds-service-price">$12.000</span>
+                            <span class="ds-service-unit">por día</span>
+                        </div>
+                        <div class="ds-service-meta">
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Estadía diaria</span>
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Casa con patio cerrado</span>
+                        </div>
+                        <div class="ds-service-divider"></div>
+                        <label class="ds-toggle-row">
+                            <span class="ds-toggle-label">Visible en tu perfil</span>
+                            <span class="ds-toggle">
+                                <input type="checkbox" checked>
+                                <span class="ds-toggle-slider"></span>
+                            </span>
+                        </label>
+                    </article>
+
+                    <!-- Servicio 4 -->
+                    <article class="ds-service-card">
+                        <div class="ds-service-top">
+                            <div class="ds-service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div>
+                            <div class="ds-service-actions">
+                                <button class="ds-service-btn" aria-label="Editar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg></button>
+                                <button class="ds-service-btn ds-service-btn--danger" aria-label="Eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                            </div>
+                        </div>
+                        <span class="ds-service-type">Refugio de animales</span>
+                        <h3>Adopción responsable</h3>
+                        <p class="ds-service-desc">Entrevista, presentación del animal y acompañamiento posterior.</p>
+                        <div class="ds-service-price-row">
+                            <span class="ds-service-price ds-service-price--free">Sin costo</span>
+                            <span class="ds-service-unit">por adopción</span>
+                        </div>
+                        <div class="ds-service-meta">
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>A coordinar</span>
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Refugio Patitas</span>
+                        </div>
+                        <div class="ds-service-divider"></div>
+                        <label class="ds-toggle-row">
+                            <span class="ds-toggle-label">Visible en tu perfil</span>
+                            <span class="ds-toggle">
+                                <input type="checkbox" checked>
+                                <span class="ds-toggle-slider"></span>
+                            </span>
+                        </label>
+                    </article>
+
+                    <!-- Servicio 5 -->
+                    <article class="ds-service-card">
+                        <div class="ds-service-top">
+                            <div class="ds-service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg></div>
+                            <div class="ds-service-actions">
+                                <button class="ds-service-btn" aria-label="Editar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg></button>
+                                <button class="ds-service-btn ds-service-btn--danger" aria-label="Eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                            </div>
+                        </div>
+                        <span class="ds-service-type">Peluquería</span>
+                        <h3>Baño y corte completo</h3>
+                        <p class="ds-service-desc">Baño, secado, corte de uñas y arreglo según cada raza.</p>
+                        <div class="ds-service-price-row">
+                            <span class="ds-service-price">$18.000</span>
+                            <span class="ds-service-unit">por servicio</span>
+                        </div>
+                        <div class="ds-service-meta">
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>90 minutos</span>
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Peluquería central</span>
+                        </div>
+                        <div class="ds-service-divider"></div>
+                        <label class="ds-toggle-row">
+                            <span class="ds-toggle-label">Visible en tu perfil</span>
+                            <span class="ds-toggle">
+                                <input type="checkbox" checked>
+                                <span class="ds-toggle-slider"></span>
+                            </span>
+                        </label>
+                    </article>
+
+                    <!-- Servicio 6 -->
+                    <article class="ds-service-card">
+                        <div class="ds-service-top">
+                            <div class="ds-service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+                            <div class="ds-service-actions">
+                                <button class="ds-service-btn" aria-label="Editar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg></button>
+                                <button class="ds-service-btn ds-service-btn--danger" aria-label="Eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                            </div>
+                        </div>
+                        <span class="ds-service-type">Transporte de animales</span>
+                        <h3>Traslado seguro de mascotas</h3>
+                        <p class="ds-service-desc">Vehículo acondicionado, transportín y seguimiento del trayecto.</p>
+                        <div class="ds-service-price-row">
+                            <span class="ds-service-price">$15.000</span>
+                            <span class="ds-service-unit">por traslado</span>
+                        </div>
+                        <div class="ds-service-meta">
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Según recorrido</span>
+                            <span class="ds-service-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Ciudad y alrededores</span>
+                        </div>
+                        <div class="ds-service-divider"></div>
+                        <label class="ds-toggle-row">
+                            <span class="ds-toggle-label">Visible en tu perfil</span>
+                            <span class="ds-toggle">
+                                <input type="checkbox" checked>
+                                <span class="ds-toggle-slider"></span>
+                            </span>
+                        </label>
+                    </article>
+                </div>
+            </section>
+            <!-- ========================================== -->
+            <!-- NUEVAS SECCIONES: AGENDA, SOLICITUDES, ETC -->
+            <!-- ========================================== -->
+
+            <!-- GRID 2 COLUMNAS: AGENDA + SOLICITUDES | PERFIL + MENSAJES -->
+            <div class="ds-grid-2col">
+                <!-- Columna izquierda -->
+                <div class="ds-col-main">
+
+                    <!-- Agenda de servicios -->
+                    <section class="ds-block">
+                        <div class="ds-block-head">
+                            <div>
+                                <h2 class="ds-block-title">Agenda de servicios</h2>
+                                <p class="ds-block-sub">Turnos, paseos, traslados y entregas organizados por horario.</p>
+                            </div>
+                            <button class="btn-mini" id="viewWeekBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                                Ver semana
+                            </button>
+                        </div>
+
+                        <div class="ds-agenda" id="agendaList">
+                            <div class="ds-agenda-item is-done">
+                                <div class="ds-agenda-time"><strong>08:30</strong><span>Hoy</span></div>
+                                <div class="ds-agenda-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg></div>
+                                <div class="ds-agenda-info">
+                                    <div class="ds-agenda-title-row"><h3>Baño y corte de Simba</h3><span class="ds-agenda-tag">Completado</span></div>
+                                    <p class="ds-agenda-client">Mariana R. · Peluquería</p>
+                                    <span class="ds-agenda-loc"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Peluquería central</span>
+                                </div>
+                            </div>
+
+                            <div class="ds-agenda-item">
+                                <div class="ds-agenda-time"><strong>09:30</strong><span>Hoy</span></div>
+                                <div class="ds-agenda-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v20"></path><path d="M5 2v20"></path><path d="M19 2v20"></path><path d="M5 8h14"></path><path d="M5 16h14"></path></svg></div>
+                                <div class="ds-agenda-info">
+                                    <h3>Consulta y vacuna de Luna</h3>
+                                    <p class="ds-agenda-client">Camila R. · Veterinaria</p>
+                                    <span class="ds-agenda-loc"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Consultorio central</span>
+                                </div>
+                                <button class="ds-complete-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Completar</button>
+                            </div>
+
+                            <div class="ds-agenda-item">
+                                <div class="ds-agenda-time"><strong>13:00</strong><span>Hoy</span></div>
+                                <div class="ds-agenda-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="20" cy="16" r="2"></circle><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"></path></svg></div>
+                                <div class="ds-agenda-info">
+                                    <h3>Paseo con Rocky</h3>
+                                    <p class="ds-agenda-client">Martín G. · Paseador</p>
+                                    <span class="ds-agenda-loc"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Parque Central</span>
+                                </div>
+                                <button class="ds-complete-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Completar</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Solicitudes nuevas -->
+                    <section class="ds-block">
+                        <div class="ds-block-head">
+                            <div>
+                                <h2 class="ds-block-title">Solicitudes nuevas</h2>
+                                <p class="ds-block-sub">Acepta una solicitud para sumarla automáticamente a tu agenda.</p>
+                            </div>
+                            <span class="ds-pill-amber" id="requestsCount">2 pendientes</span>
+                        </div>
+
+                        <div class="ds-requests" id="requestsList">
+                            <article class="ds-request-card">
+                                <div class="ds-request-top">
+                                    <div class="ds-request-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg></div>
+                                    <div class="ds-request-head">
+                                        <strong>Camila R.</strong>
+                                        <span class="ds-request-price">$18.000</span>
+                                    </div>
+                                </div>
+                                <h3>Baño y corte completo</h3>
+                                <p class="ds-request-meta">Toby · Beagle · Peluquería</p>
+                                <span class="ds-request-when"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Mañana, 10:30</span>
+                                <div class="ds-request-divider"></div>
+                                <div class="ds-request-actions">
+                                    <button class="ds-reject-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Rechazar</button>
+                                    <button class="ds-accept-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Aceptar solicitud</button>
+                                </div>
+                            </article>
+
+                            <article class="ds-request-card">
+                                <div class="ds-request-top">
+                                    <div class="ds-request-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                                    <div class="ds-request-head">
+                                        <strong>Julián P.</strong>
+                                        <span class="ds-request-price">$12.000</span>
+                                    </div>
+                                </div>
+                                <h3>Cuidado diario en mi hogar</h3>
+                                <p class="ds-request-meta">Mora · Mestiza · Cuidador con lugar propio</p>
+                                <span class="ds-request-when"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Viernes, 20:00</span>
+                                <div class="ds-request-divider"></div>
+                                <div class="ds-request-actions">
+                                    <button class="ds-reject-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Rechazar</button>
+                                    <button class="ds-accept-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Aceptar solicitud</button>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Columna derecha (aside) -->
+                <div class="ds-col-aside">
+
+                    <!-- Tu perfil profesional -->
+                    <section class="ds-aside-card">
+                        <div class="ds-aside-head">
+                            <h2 class="ds-aside-title">Tu perfil profesional</h2>
+                            <span class="ds-verified">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                Verificado
+                            </span>
+                        </div>
+                        <div class="ds-prof-head">
+                            <div class="ds-prof-avatar">P</div>
+                            <div>
+                                <strong>Patitas del Parque</strong>
+                                <span>christian lopez</span>
+                            </div>
+                        </div>
+                        <div class="ds-progress-row"><span>Perfil completo</span><strong>100%</strong></div>
+                        <div class="ds-progress"><div class="ds-progress-fill" style="width:100%"></div></div>
+                        <div class="ds-prof-loc"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Palermo, Belgrano, Recoleta y alrededores</div>
+                        <button class="ds-edit-profile" id="editProfileBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg>
+                            Editar perfil
+                        </button>
+                    </section>
+
+                    <!-- Mensajes recientes -->
+                    <section class="ds-aside-card">
+                        <div class="ds-aside-head">
+                            <h2 class="ds-aside-title">Mensajes recientes</h2>
+                            <span class="ds-pill-amber">2 nuevos</span>
+                        </div>
+                        <ul class="ds-messages">
+                            <li class="ds-message">
+                                <div class="ds-msg-avatar">JP<span class="ds-msg-dot"></span></div>
+                                <div class="ds-msg-body"><strong>Julián P.</strong><p>¿Tienes lugar para Mora este finde?</p></div>
+                                <div class="ds-msg-end"><span>12:40</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                            </li>
+                            <li class="ds-message">
+                                <div class="ds-msg-avatar">MR<span class="ds-msg-dot"></span></div>
+                                <div class="ds-msg-body"><strong>Mariana R.</strong><p>¡Muchas gracias por las fotos de Simba!</p></div>
+                                <div class="ds-msg-end"><span>Ayer</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                            </li>
+                            <li class="ds-message">
+                                <div class="ds-msg-avatar">LD</div>
+                                <div class="ds-msg-body"><strong>Laura D.</strong><p>El pedido llegó en perfecto estado.</p></div>
+                                <div class="ds-msg-end"><span>Lun</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Lo que dicen de ti -->
+                    <section class="ds-aside-card">
+                        <div class="ds-aside-head">
+                            <h2 class="ds-aside-title">Lo que dicen de ti</h2>
+                            <span class="ds-rating-mini"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>4,9</span>
+                        </div>
+                        <div class="ds-review">
+                            <div class="ds-review-stars">★★★★★</div>
+                            <p>"Excelente con Luna. Recibí fotos durante todo el paseo y volvió feliz."</p>
+                            <div class="ds-review-author"><span class="ds-review-avatar">CR</span><div><strong>Camila R.</strong><span>Hace 2 días</span></div></div>
+                        </div>
+                        <a href="#" class="ds-all-reviews">Ver todas las reseñas <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </section>
+
+                    <!-- Impacto comunidad -->
+                    <section class="ds-impact">
+                        <div class="ds-impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div>
+                        <div>
+                            <strong>Tu impacto en la comunidad</strong>
+                            <p>Puedes combinar servicios profesionales con adopciones, rescates y campañas solidarias.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD DE INGRESOS -->
+            <section class="ds-block ds-revenue">
+                <div class="ds-block-head">
+                    <div>
+                        <h2 class="ds-block-title">Actividad de ingresos</h2>
+                        <p class="ds-block-sub">Resumen de servicios completados esta semana.</p>
+                    </div>
+                    <span class="ds-trend-up"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>+12%</span>
+                </div>
+                <div class="ds-chart">
+                    <div class="ds-bar-col"><div class="ds-bar" style="height:35%"></div><span>Lun</span></div>
+                    <div class="ds-bar-col"><div class="ds-bar" style="height:55%"></div><span>Mar</span></div>
+                    <div class="ds-bar-col"><div class="ds-bar" style="height:40%"></div><span>Mié</span></div>
+                    <div class="ds-bar-col"><div class="ds-bar" style="height:65%"></div><span>Jue</span></div>
+                    <div class="ds-bar-col"><div class="ds-bar" style="height:50%"></div><span>Vie</span></div>
+                    <div class="ds-bar-col"><div class="ds-bar ds-bar--peak" style="height:85%"></div><span>Sáb</span></div>
+                    <div class="ds-bar-col"><div class="ds-bar" style="height:60%"></div><span>Dom</span></div>
+                </div>
+                <div class="ds-chart-total"><span>Total semanal</span><strong>$ 58.200</strong></div>
+            </section>
+
+            <!-- PERFIL PÚBLICO -->
+            <section class="ds-block ds-public">
+                <div class="ds-public-grid">
+                    <div class="ds-public-main">
+                        <div class="ds-public-head">
+                            <div class="ds-public-avatar">PD</div>
+                            <div>
+                                <span class="ds-public-eyebrow">Perfil público</span>
+                                <h2 class="ds-public-name" id="publicName">Patitas del Parque</h2>
+                                <p class="ds-public-role">christian lopez · Prestador de servicios</p>
+                            </div>
+                        </div>
+                        <p class="ds-public-bio">Equipo dedicado al bienestar animal con atención personalizada, seguimiento por fotos y cuidados adaptados a cada mascota.</p>
+                        <div class="ds-public-fields">
+                            <div class="ds-public-field"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span class="ds-public-field-label">Email</span><span class="ds-public-field-value">maxilopez252@gmail.com</span></div>
+                            <div class="ds-public-field"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="ds-public-field-label">Teléfono</span><span class="ds-public-field-value">+54 9 11 5555 0142</span></div>
+                            <div class="ds-public-field"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span class="ds-public-field-label">Ubicación</span><span class="ds-public-field-value">Buenos Aires, Argentina</span></div>
+                        </div>
+                    </div>
+                    <div class="ds-public-aside">
+                        <div class="ds-progress-row"><span>Perfil completo</span><strong>100%</strong></div>
+                        <div class="ds-progress"><div class="ds-progress-fill" style="width:100%"></div></div>
+                        <button class="btn-primary ds-public-edit" id="publicEditBtn"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg>Editar datos profesionales</button>
+                        <a href="#" class="ds-public-settings" id="publicSettingsLink">Configuración de la cuenta <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </div>
+                </div>
+            </section>
+
+            <p class="ds-demo-footer">Panel de demostración: los cambios se pierden al recargar y no generan turnos, mensajes ni cobros reales.</p>
+
+        </main>
+    </div>
+
+    <!-- 1. Utilidades -->
+    <script src="js/utils/helpers.js"></script>
+    
+    <!-- 2. Módulos compartidos -->
+    <script src="js/modules/ThemeModule.js"></script>
+    
+    <!-- 3. Módulo específico de esta vista -->
+    <script src="js/modules/DashboardServiceModule.js"></script>
+    
+    <!-- 4. Punto de entrada (siempre al final) -->
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -14,9 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const isHome = document.querySelector('.hero') !== null;
     const isDashboardV1 = document.querySelector('.dashboard-layout') !== null;
     const isDashboardUser = document.body.classList.contains('dashboard-user-body');
+    const isDashboardService = document.body.classList.contains('dashboard-service-body'); // 👈 NUEVO
 
     // 3️⃣ Inicializar módulos según la vista
-    if (isDashboardUser) {
+    if (isDashboardService) { // 👈 NUEVO: Prioridad al dashboard de servicio
+        console.log('📍 Vista detectada: Dashboard de Servicio (Prestador)');
+        if (typeof DashboardServiceModule !== 'undefined') {
+            DashboardServiceModule.init();
+        }
+    } 
+    else if (isDashboardUser) {
         console.log('📍 Vista detectada: Dashboard de Usuario (Dueño)');
         if (typeof DashboardUserModule !== 'undefined') {
             DashboardUserModule.init();
