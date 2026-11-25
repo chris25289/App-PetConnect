@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body, div, ul, li, a, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --web-color: #333;
+    --perfil-color: #444;
+    --bg-color: #318515;
+    --chat-color-me: #2da3d2;
+    --chat-color-you: #222;
+    --letra-color: #ededed;
+    --sidebar-color: #fff;
+    --dark-color: #f62;
+    --chat-color: #555;
+}
+
+/* mensajeria */
+
+.chat {
+    width: clamp(300px, 60%, 900px);
+    background-color: var(--chat-color);
+    margin: 65px auto 0 400px;
+    border-radius: 15px;
+    padding: 8px;
+    position: absolute;
+    color: var(--letra-color);
+    top: 5%;
+    right: 15%;
+}
+
+.chat__user {
+    display: flex;
+    padding: 10px;
+    align-items: center;   
+    border-bottom: 1px solid var(--letra-color);
+}
+
+.atras {
+    color: var(--letra-color);
+}
+
+.perfil_verificado{
+    left: 100px;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.chat__user img {
+    max-width: 2.3rem;
+    margin: 4px;
+}
+
+.chat__content {
+    padding: 12px;
+    background-color: var(--letra-color);
+    border-radius: 0 0 15px 15px;
+    max-height: 345px;
+    overflow-y: scroll;
+}
+
+.msg {
+    padding: 12px;
+    background-color: var(--chat-color-me);
+    border-radius: 20px 20px 20px 0;
+    font-size: .7rem;
+    position: relative;
+    z-index: 10;
+    max-width: clamp(300px, 70%, 600px);
+    margin: 5px;
+    width: fit-content;
+    padding-top: 3px
+}
+
+.msg::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-color: var(--chat-color-me);
+    bottom: -3px;
+    left: -4px;
+    clip-path: polygon(43% 0,0% 100%, 100% 68%);
+    z-index: -1;
+}
+
+.self {
+    background-color: var(--chat-color-you);
+    margin-left: auto;
+    border-radius: 20px 20px 0 20px;
+    width: fit-content;
+}
+
+.self::before {
+    background-color: var(--chat-color-you);
+    clip-path: polygon(57% 0, 100% 100%, 0 68%);
+    bottom: -3px;
+    left: auto;
+    right: -4px;
+}
+
+.barra_msg {
+    position: relative;
+    border-radius: 20px;
+    padding: 12px;
+    width: 90%;
+    height: 45px;
+    display: flex;
+    left: 4.5%;
+    background-color: #444;
+    color: var(--sidebar-color);
+    /* resize: none;
+    overflow: hidden; */
+    border: none;
+    outline: none;
+}
+
+.inferior{
+    display: flex;
+}
+
+.enviar{
+    position: absolute;
+    left: 85%;
+    top: 47%;
+    top: 50%;
+    cursor: pointer;
+    width: 24px;
+}
+
+.div_inferior{
+    position: sticky;
+    padding-top: 25px;
+    padding-bottom: 8px;
+    top: 25px;
+}
