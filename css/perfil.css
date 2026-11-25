@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body, div, ul, li, a, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* --bg-color: #318515; */
+    --sidebar-color: #fff;
+    --dark-color: #C4BC1D;
+    --card-color: #999;
+    --preguntas-color: #444;
+    --os-color: #333;
+    --link-color: #48e;
+    --letra-color: #ededed;
+}
+
+.usuario{
+    margin: auto;
+    border: 1px solid var(--os-color);
+    width: 70%;
+    height: 500px;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    top: 25px;
+}
+
+/* yo */
+.mi_tarjeta{
+    border: 1px solid var(--os-color);
+    background-color: var(--preguntas-color);
+    color: var(--os-color);
+    max-width: 350px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+.mis_datos{
+    padding: 5px;
+    color: var(--os-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid var(--os-color);
+}
+
+.mis_datos p{
+    position: relative;
+    color: #555;
+    font-size: .8rem;
+    left: 55%;
+}
+
+.info{
+    position: relative;
+    left: 35px;
+    width: 220px;
+    height: 280px;
+    border: 1px solid var(--os-color);
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.reciente_item{
+    width: 100%;
+    border-bottom: 1px solid var(--os-color);
+    padding: 8px;
+}
+
+.info h5{
+    padding: 5px;
+}
+/* Mascota */
+
+.foto_perfil, .my_pet{
+    width: 34px;
+    padding: 10px;
+}
+
+
+.mi_mascota{
+    background-color: var(--card-color);
+    color: var(--sidebar-color);
+    width: 350px;
+    height: 400px;
+    border-radius: 25px;
+    margin: 20% auto 5% 50%;
+    margin-top: 0;
+    bottom: 0;
+    position: absolute;
+    left: 8%;
+    top: 85px;
+}
+
+.sus_datos{
+    justify-items: center;
+    padding: 2px;
+    width: 95%;
+    align-items: center;
+    /* gap: 2px; */
+    border-bottom: 3px solid var(--sidebar-color);
+}
+
+.su_nombre{
+    padding: 5px;
+    text-align: center;
+}
+
+.foto_pet{
+    position: relative;
+    left: 40%;
+    padding: 5px;
+    width: 30%;
+    border-radius: 40%;
+}
+
+/* tramites */
+
+.sus_tramites{
+    padding: 8px;
+    left: 8px;
+    font-size: .8rem;
+}
+
+.tramite_nombre, .tramite_nacimiento, .tramite_estado{
+    padding-bottom: 5px;
+}
+
+/* Reportes */
+
+.boton_reporte{
+    color: var(--letra-color);
+}
+
+.reportar_perdido{
+    background-color: #48e;
+    position: relative;
+    width: 90%;
+    padding: 5px;
+    border-radius: 12px;
+    top: 85%;
+    text-align: center;
+    left: 15px;
+    border: none;
+}
+
+/* aclaracion del tipo */
+
+.tipo_usuario, .tipo_foro{
+    padding: 5px;
+    position: relative;
+    border-radius: 15px;
+    color: var(--letra-color);
+    width: fit-content;
+    background-color: #48e;
+    text-align: center;
+}
