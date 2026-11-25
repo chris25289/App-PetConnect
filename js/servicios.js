@@ -194,3 +194,32 @@ buscar.addEventListener(`keyup`, e => {
         })
     }
 })
+
+// Notificacion de mensaje
+
+let notificaciones = [{
+    cliente : `Francisco Baez`,
+    mensaje: `Hola, que tal?`
+}]
+
+let aviso = document.querySelector(".notificacion_boton")
+let panel = document.querySelector(".panel");
+let mensaje = document.createElement("div");
+
+notificaciones.forEach(notificacion => {
+    if (notificacion.mensaje == ``) {
+        mensaje.innerHTML = `
+        <span class="material-symbols-outlined">mail</span>
+        `;
+        panel.innerHTML = `<p>No tienes ningun mensaje</p>`;
+    } else {
+        mensaje.innerHTML = `
+        <span class="material-symbols-outlined">mark_email_unread</span>
+        `;
+        panel.innerHTML = `
+        <a href="../html/chat.html"><p>${notificacion.cliente}:</a> ${notificacion.mensaje}</p>
+        `;
+    } 
+    aviso.appendChild(panel)
+    aviso.appendChild(mensaje)
+})
