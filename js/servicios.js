@@ -70,6 +70,72 @@ let perfiles_veterinaria = [{
     tipo_servicio: `veterinaria`, 
     comentarios: `Comentarios mayormente positivos`,
     clase: `Usuario`
+},,{
+    foto: ``,
+    nombre: `Florencia Baez`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente positivos`,
+    clase: `Usuario`
+},{
+    foto: ``,
+    nombre: `Fernando Donfe`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente positivos`,
+    clase: `Usuario`
+},{
+    foto: ``,
+    nombre: `Alrescate`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente negativas`,
+    clase: `Fundacion`
+},{
+    foto: ``,
+    nombre: `Martias Correa`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios diversos`,
+    clase: `Usuario`
+},{
+    foto: ``,
+    nombre: `Petmedical`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente negativos`,
+    clase: `Fundacion`
+},{
+    foto: ``,
+    nombre: `Walter Calamaro`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios diversos`,
+    clase: `Usuario`
+},{
+    foto: ``,
+    nombre: `Suvida`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente negativos`,
+    clase: `Fundacion`
+},{
+    foto: ``,
+    nombre: `Acaestamos`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente negativos`,
+    clase: `Fundacion`
+},{
+    foto: ``,
+    nombre: `Lisandro Fernandez`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios diversos`,
+    clase: `Usuario`
+},{
+    foto: ``,
+    nombre: `Josefina Soule`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente negativos`,
+    clase: `Usuario`
+},{
+    foto: ``,
+    nombre: `Juan Roman`,
+    tipo_servicio: `veterinaria`, 
+    comentarios: `Comentarios mayormente positivos`,
+    clase: `Usuario`
 }];
 
 let contenedor = document.querySelector(`.card__front`);
@@ -114,3 +180,17 @@ perfiles_veterinaria.forEach(perfil =>{
     contenedor.appendChild(veterinaria);
 
 }); // NO TOCAR ABSOLUTAMENTE NADA 
+
+// Buscador
+
+const buscar = document.querySelector(".search");
+
+buscar.addEventListener(`keyup`, e => {
+    if (e.target.matches(`#buscador`)) {
+        document.querySelectorAll(`.card__front`).forEach(perfil =>{
+            perfil.textContent.toLowerCase().includes(e.target.value)
+            ? perfil.classList.remove(`filtro`)
+            : perfil.classList.add(`filtro`);
+        })
+    }
+})
