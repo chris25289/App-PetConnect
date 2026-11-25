@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body, div, ul, li, a, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --bg-color: #318515;
+    --os-color: #222;
+    --sidebar-color: #fff;
+    --link-color: #48e;
+    --boton-color: #F0F27C;
+    --preguntas-color: #444;
+}
+
+
+/* secction */
+
+.busqueda{
+    position: absolute;
+    top: 15%;
+    margin: auto;
+    left: 15%;
+    width: 70%;
+    padding: 15px;
+}
+
+.container_search{
+    border-bottom: 1px solid var(--os-color);
+    padding: 30px;
+}
+
+.search{
+    position: relative;
+    width: 85%;
+    border-radius: 15px;
+    left: 10%;
+    padding: 10px;
+    border: 1px solid var(--os-color);
+    outline: none;
+    margin: auto;
+    height: fit-content;
+    background-color: transparent;
+    color: var(--os-color);
+    text-align: center;
+}
+
+.search::placeholder{
+    color: var(--os-color);
+}
+/* card  */
+
+.servicio_caja {
+    position: relative;
+    display: flex;
+    height: fit-content;
+    background-color: var(--sidebar-color);
+    left: .3px;
+    top: 12px;
+}
+
+/* .card__front:first-child{
+    border: none;
+} */
+
+
+.card__front{
+    position: relative;
+    display: grid;
+    padding-top: 5px;
+    grid-template-columns: repeat(auto-fill, 285px);
+    border-bottom: 1px solid var(--os-color);
+    height: 70px;
+    width: 100%;
+    gap: 50px;
+    /* padding-right: 5px; */
+}
+
+.data_servicio {
+    position: relative;
+    left: 8%;
+    padding: 12px;
+    font-size: .6rem;
+}
+
+.data_servicio .servicio_name {
+    font-size: 1.6rem;
+    display: block;
+    padding: 15px;
+}
+
+/* botones */
+
+.opcines{
+    position: relative;
+    display: flex;
+    gap: 8px;
+    padding-right: 15px;
+    bottom: 105px;
+    left: 60%;
+}
+
+.ver_perfil{
+    background-color: var(--link-color);
+    color: var(--sidebar-color);
+    border-radius: 15px;
+    font-size: .6rem;
+    padding: 5px;
+}
+
+.usuario{
+    background-color: darkred;
+    color: var(--sidebar-color);
+    border-radius: 15px;
+    font-size: .6rem;
+    padding: 5px;
+}
+
+.fundacion{
+    background-color: darkgreen;
+    position: relative;
+    color: var(--sidebar-color);
+    border-radius: 15px;
+    font-size: .6rem;
+    padding: 5px;
+    left: 5px;
+}
