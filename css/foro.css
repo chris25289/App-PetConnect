@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body, div, ul, li, a, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --bg-color: #318515;
+    --sidebar-color: #fff;
+    --dark-color: #C4BC1D;
+    --card-color: #666;
+    --botones-color: #888;
+    --preguntas-color: #333;
+    --os-color: #fff;
+    --link-color: #48e;
+    --letra-color: #ededed;
+    --sombra-color: #cacaca;
+    background-color: var(--bg-color);
+    color: var(--letra-color);
+}
+
+/* carousel */
+
+section{
+    position: relative;
+    margin: auto;
+    max-width: 85%;
+    top: 25px;
+    left: 75px;
+}
+
+.tema h5,
+.tema h6,
+.foro_info p {
+    margin: 8px;
+}
+
+.viewport{
+    gap: 5px;
+    overflow-x: hidden;
+    scrollbar-width: 0;
+    max-width: 100%;
+    height: 135px;
+    padding: 2px;
+}
+
+.container_foro{
+    display: block;
+    width: 215px;
+    /* border: 1px solid #333; */
+}
+
+.categoria h2 {
+    padding: 8px;
+    grid-template-rows: 1 / -1;
+}
+
+.tema{
+    position: relative;
+    display: flex;
+    left: 5%;
+    width: 100%;
+}
+
+.inicio_foro{
+    width: 215px;
+    height: 115px;
+    position: relative;
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid var(--preguntas-color);
+}
+
+.titulo_foro{
+    position: relative;
+    width: 90%; 
+    height: 25px;
+    padding: .3px;
+    left: .5px;
+    color: var(--preguntas-color);
+}
+
+.descripcion_foro{
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    width: 90%;
+    height: 25px;
+    left: 5px;
+    font-size: .8rem;
+    color: var(--card-color);
+    top: 12px;
+}
+
+.foro_info{
+    position: relative;
+    display: flex;
+    color: var(--letra-color);
+    background-color: var(--link-color);
+    width: 215px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 0 0 15px 15px ;
+    bottom: 110%;
+    right: 11px;
+    font-size: .7rem;
+    border-top: none;
+    border: 1px solid var(--preguntas-color);
+}
+
+/*  controles */
+
+.controles {
+    position: absolute;
+    display: flex;
+    z-index: 10;
+}
+
+.controles button{
+    width: 25px;
+    position: relative;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--botones-color);
+    box-shadow: 0 2px 6px var(--os-color);
+    cursor: pointer;
+    margin: 0 10px;
+    transition: opacity .2s ease;
+    gap: 16px;
+}
+
+.controles button:hover{
+    background-color: var(--sombra-color);
+}
+
+.controles button:disabled{
+    opacity: .4; 
+    cursor: default;
+}
+
+.flecha_izq{
+    position: relative;
+    align-items: center;
+    top: 110px;
+    left: 20px;
+}
+
+.flecha_der{
+    position: relative;
+    align-items: center;
+    top: 110px;
+    left: 975%;
+}
+
+
+/* aviso */
+
+.aviso{
+    position: relative;
+    display: flex;
+    left: 75px;
+    width: fit-content;
+    gap: 15px;
+}
+
+.aviso_mascota{
+    background-color: darkslategrey;
+    width: 250px;
+    height: fit-content;
+    color: #cccc;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.info_pet{
+    position: relative;
+    display: block;
+    width: 90%;
+    font-size: .9rem;
+    left: 15px;
+    padding: 5px;
+}
+
+.foto_pet img{
+    position: relative;
+    border-radius: 25px;
+    width: 75%;
+    left: 10%;
+    align-items: center;
+    max-height: 175px;
+}
+
+/* Carrouseles */
+
+    /* alimentacion */
+    #viewport_alimentacion > .viewport{
+        display: flex;
+        left: 20%;
+        max-width: 72%;
+        height: 180px;
+        /* overflow-x: hidden; */
+    }
+
+    /* bienestar */
+    #viewport_bienestar > .viewport{
+        display: flex;
+        left: 20%;
+        max-width: 72%;
+        height: 180px;
+        /* overflow-x: hidden; */
+    }
+
+    /* habitos */
+    #viewport_habitos > .viewport{
+        display: flex;
+        left: 20%;
+        max-width: 72%;
+        height: 180px;
+        /* overflow-x: hidden; */
+    }
+
+    /* recomendaciones */
+    #viewport_recomendaciones > .viewport{
+        display: flex;
+        left: 20%;
+        max-width: 72%;
+        height: 180px;
+        /* overflow-x: hidden; */
+    }
+
+  /* perdidos */
+    #viewport_perdidos > .viewport{
+        height: 350px;
+        display: flex;
+        left: 20%;
+        max-width: 68%;
+        overflow-x: scroll;
+    }
