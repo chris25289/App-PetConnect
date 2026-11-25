@@ -62,21 +62,14 @@ body {
     top: 12px;
 }
 
-/* .card__front:first-child{
-    border: none;
-} */
-
-
 .card__front{
     position: relative;
     display: grid;
-    padding-top: 5px;
-    grid-template-columns: repeat(auto-fill, 285px);
+    grid-template-columns: repeat(auto-fill, 270px);
     border-bottom: 1px solid var(--os-color);
     height: 70px;
     width: 100%;
     gap: 50px;
-    /* padding-right: 5px; */
 }
 
 .data_servicio {
@@ -100,11 +93,12 @@ body {
     gap: 8px;
     padding-right: 15px;
     bottom: 105px;
-    left: 60%;
+    left: 65%;
 }
 
 .ver_perfil{
     background-color: var(--link-color);
+    position: relative;
     color: var(--sidebar-color);
     border-radius: 15px;
     font-size: .6rem;
@@ -127,4 +121,34 @@ body {
     font-size: .6rem;
     padding: 5px;
     left: 5px;
+}
+
+/* Buscador */
+
+.lupa{
+    position: relative;
+    top: 8px;
+    right: 70%;
+}
+
+.filtro{
+    display: none;
+}
+
+.disponibles p{
+    position: relative;
+    left: 46%;
+    top: 10px;
+    font-size: .7rem;
+    color: #888;
+}
+.item_filtro{
+    position: relative;
+    padding: 5px;
+    top: 15px;
+    left: 40%;
+    border-radius: 15px;
+    font-size: .6rem;
+    color: var(--sidebar-color);
+    background-color: var(--link-color);
 }
